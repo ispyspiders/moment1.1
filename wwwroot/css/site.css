@@ -33,6 +33,10 @@ a:visited {
   color: #a06268;
 }
 
+ul li{
+margin-bottom: 0.5rem;
+}
+
 body {
   background-color: var(--soft-dark);
   margin: 0;

@@ -2,8 +2,30 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Razor";
+
+    List<string> courses = new List<string>();
+    courses.Add("DT084G, Introduktion till programmering i JavaScript");
+    courses.Add("DT057G, Webbutveckling I");
+    courses.Add("DT200G, Grafisk teknik för webb");
+    courses.Add("DT068G, Webbanvändbarhet");
+    courses.Add("DT003G, Databaser");
+    courses.Add("DT093G, Webbutveckling II");
+    courses.Add("DT197G, Webbdesign för CMS");
+    courses.Add("DT173G, Webbutveckling III");
+    courses.Add("IK060G, Projektledning");
+    courses.Add("DT071G, Programmering i C#.NET");
+    courses.Add("DT193G, Fullstack-utveckling med ramverk");
+    courses.Add("DT191G, Webbutveckling med .NET");
+    courses.Add("DT210G, Fördjupad frontend-utveckling");
 }
 
 
-    <h1>@ViewData["Title"]</h1>
+<h1>@ViewData["Title"]</h1>
+<h2>Information</h2>
 
+<h2>Kurser jag läst</h2>
+<ul>
+    @foreach(string course in courses){
+        <li>@course</li>
+    }
+</ul>
