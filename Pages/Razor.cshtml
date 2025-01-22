@@ -25,15 +25,19 @@
 
 
 <h1>@ViewData["Title"]</h1>
+
 <h2>Information</h2>
+@* Datum/klockslag *@
 <p><span class="bold">Datum/klockslag: </span> @now</p>
 
+@* Är idag fredag? *@
 @if(now.DayOfWeek == DayOfWeek.Friday){
 <p>Idag är det fredag! :) </p>
 } else{
 <p>Idag är det inte fredag! :( </p>
 }
 
+@* Kurslista *@
 <h2>Kurser jag läst</h2>
 <ul>
     @foreach (string course in courses)
