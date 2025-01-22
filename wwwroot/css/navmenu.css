@@ -79,6 +79,14 @@ nav a {
     text-align: center;
 }
 
+nav a:hover{
+    text-decoration: none;
+}
+
+nav a:visited{
+    color: var(--dark);
+}
+
 /* Aktiv sida */
 nav ul li.active {
     background-color: var(--dark);

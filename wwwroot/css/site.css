@@ -10,6 +10,29 @@
   color: var(--dark);
 }
 
+h1,
+h2 {
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-top: 0;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--coral);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #a06268;
+}
+
 body {
   background-color: var(--soft-dark);
   margin: 0;
@@ -26,6 +49,14 @@ header a {
   color: var(--blue);
   font-size: 1.5rem;
   font-family: "Caprasimo", serif;
+}
+
+header a:visited {
+  color: var(--blue);
+}
+
+header a:hover {
+  text-decoration: none;
 }
 
 header a span {
@@ -62,7 +93,19 @@ header a span span {
   font-weight: 600;
 }
 
+/* Main */
+main {
+  background-color: var(--light);
+  margin: 1rem 0;
+  padding: 1rem;
+}
 
+main p {
+  max-width: 30rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 2rem;
+}
 
 /* Footer */
 footer {
@@ -82,6 +125,13 @@ footer a:hover {
   color: var(--soft-dark);
 }
 
+@media (min-width: 768px) {
+  main {
+    padding: 4rem;
+  }
+}
+
+/* För desktop */
 @media (min-width: 1024px) {
   .container {
     padding: 1rem;
@@ -90,15 +140,15 @@ footer a:hover {
     gap: 1rem;
   }
 
-header{
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 
-.header-content{
-  margin: 0;
-}
+  .header-content {
+    margin: 0;
+  }
 
   header a {
     font-size: 2.5rem;
@@ -107,5 +157,9 @@ header{
 
   header a span {
     font-size: 1.5rem;
+  }
+
+  main {
+    margin: 0;
   }
 }
