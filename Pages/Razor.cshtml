@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Razor";
 
+    @* Kurslista *@
     List<string> courses = new List<string>();
     courses.Add("DT084G, Introduktion till programmering i JavaScript");
     courses.Add("DT057G, Webbutveckling I");
@@ -17,15 +18,26 @@
     courses.Add("DT193G, Fullstack-utveckling med ramverk");
     courses.Add("DT191G, Webbutveckling med .NET");
     courses.Add("DT210G, Fördjupad frontend-utveckling");
+
+    @* Datum/klocklsag *@
+    var now = DateTime.Now;
 }
 
 
 <h1>@ViewData["Title"]</h1>
 <h2>Information</h2>
+<p><span class="bold">Datum/klockslag: </span> @now</p>
+
+@if(now.DayOfWeek == DayOfWeek.Friday){
+<p>Idag är det fredag! :) </p>
+} else{
+<p>Idag är det inte fredag! :( </p>
+}
 
 <h2>Kurser jag läst</h2>
 <ul>
-    @foreach(string course in courses){
+    @foreach (string course in courses)
+    {
         <li>@course</li>
     }
 </ul>
