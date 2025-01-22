@@ -21,15 +21,23 @@
     <header>
         <a class="navbar-brand" asp-area="" asp-page="/Index">Moment1.1 <br /> <span>Webbutveckling med
                 <span>.NET</span></span></a>
-
-        <!-- knapp att öppna menyn med -->
-        <button class="menu-btn open" id="menu-btn">
-            <span class="menu-icon">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </span>
-        </button>
+        <div class="header-content">
+            <div id="date-container">
+                @{
+                    var date = DateTime.Now.ToString("yyyy-MM-dd");
+                }
+                <p>Dagens datum är: <span>@date</span>
+                </p>
+            </div>
+            <!-- knapp att öppna menyn med på mindre skärmar-->
+            <button class="menu-btn open" id="menu-btn">
+                <span class="menu-icon">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </span>
+            </button>
+        </div>
     </header>
 
     <div class="container">
@@ -38,10 +46,10 @@
                 <li class="@GetActiveClass("/Index")">
                     <a class="" asp-area="" asp-page="/Index">Start</a>
                 </li>
-                <li class="">
+                <li class="@GetActiveClass("/Razor")">
                     <a class="" asp-area="" asp-page="/Razor">Razor</a>
                 </li>
-                <li class="">
+                <li class="@GetActiveClass("/About")">
                     <a class="" asp-area="" asp-page="/About">Om sidan</a>
                 </li>
             </ul>
@@ -64,6 +72,7 @@
 </body>
 
 </html>
+
 
 @functions {
     public string GetActiveClass(string page)

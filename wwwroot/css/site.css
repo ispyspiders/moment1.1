@@ -37,12 +37,32 @@ header a span span {
   color: var(--coral);
 }
 
-.container {
-  padding: 1rem;
-  display: grid;
-  grid-template-columns: 20rem 1fr;
-  gap: 1rem;
+.header-content {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
+
+#date-container {
+  border: var(--pink) 1px solid;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3125rem;
+}
+
+#date-container p {
+  color: var(--pink);
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+#date-container p span {
+  color: var(--coral);
+  font-weight: 600;
+}
+
+
 
 /* Footer */
 footer {
@@ -60,4 +80,32 @@ footer a {
 footer a:hover {
   text-decoration: underline;
   color: var(--soft-dark);
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 20rem 1fr;
+    gap: 1rem;
+  }
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.header-content{
+  margin: 0;
+}
+
+  header a {
+    font-size: 2.5rem;
+    line-height: 2rem;
+  }
+
+  header a span {
+    font-size: 1.5rem;
+  }
 }
