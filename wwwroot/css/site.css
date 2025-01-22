@@ -1,0 +1,63 @@
+:root {
+  --pink: #F4CBDB;
+  --coral: #EA8F98;
+  --soft-dark: #3B4256;
+  --dark: #2D2D4B;
+  --light: #F3F4EE;
+  --blue: #93C5CE;
+
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--dark);
+}
+
+body {
+  background-color: var(--soft-dark);
+  margin: 0;
+}
+
+/* Header */
+header {
+  background-color: var(--dark);
+  padding: 1rem;
+}
+
+header a {
+  text-decoration: none;
+  color: var(--blue);
+  font-size: 1.5rem;
+  font-family: "Caprasimo", serif;
+}
+
+header a span {
+  color: var(--pink);
+  font-size: 1rem;
+}
+
+header a span span {
+  color: var(--coral);
+}
+
+.container {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 20rem 1fr;
+  gap: 1rem;
+}
+
+/* Footer */
+footer {
+  background-color: var(--pink);
+  padding: 1rem;
+  text-align: center;
+}
+
+footer a {
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: var(--soft-dark);
+}
